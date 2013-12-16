@@ -1,0 +1,1 @@
+#### These are my answers for the Tealeaf academy: Intro to Ruby course, week 3 quiz

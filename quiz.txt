@@ -1,0 +1,67 @@
+Week 3 quiz
+
+1. What is HTML? What is CSS? What is Javascript?
+  > HTML is the programming language that browsers parse and turn into a webpage
+  > CSS is the language that is used to add visual styling to a displayed
+  >   webpage
+  > Javascript is a client-side programming language that allows the user and
+  >   webpage to interact.  This interaction may or may not include HTTP
+  >   requests
+
+2. What are the major parts of an HTTP request?
+  > URL, verb (method) and headers (which can include parameters).
+
+3. What are the major parts of an HTTP response?
+  > Response code, headers and reason.
+
+4. How do you submit an HTTP POST request, with a "username" attribute set to
+   "bob"? What if we wanted a GET request instead?
+  > <form method="post">
+  >   <input type="text" name="bob" />
+  > </form>
+  >
+  > <form>
+  >   <input type="text" name="bob" />
+  > </form>
+
+5. Why is it important for us, as web developers, to understand that HTTP is a
+   "stateless" protocol?
+  > We have to remember to manage our our state, using a persistent or
+  >   semi-persistent method such as sessions, cookies and/or databases.
+
+6. If the internet is just HTTP requests/responses, why do we only use browsers
+   to interface with web applications? Are there any other options?
+  > You can manually build and send HTTP requests using things like
+  >   "HTTP client" on OSX and "Dev HTTP Client" or "Postman", which are
+  >   extensions for the Google Chrome browser.
+
+7. What is MVC, and why is it important?
+  > MVC is "Model, View, Controller".  It is important because it gives complex
+  >   code a way to be organized.  Business logic goes in the Model, display
+  >   logic goes in the View and the Controller is used to pass data between the
+  >   Model and View.
+
+The below questions are about Sinatra:
+
+1. At a high level, how are requests processed?
+  > Requests are processed based on their verb and url.  The corresponding block
+  >   is processed.  The last thing in the clock should give a response.  The
+  >   response can be either a redirect or rendered text.  The rendered text
+  >   can come from a template or be rendered directly in the block.
+
+2. In the controller/action, what's the difference between rendering and
+   redirecting?
+  > Rendering returns text for the browser to parse.  Redirecting tells the
+  >   browser to send a new "GET" request to the redirect URL.
+
+3. In the ERB view template, how do you show dynamic content?
+  > The local variable my_var is currently set to: <%= "#{my_var}" %>
+
+4. Given what you know about ERB templates, when do you suppose the ERB template
+   is turned into HTML?
+  > When erb :template is executed, Sinatra compiles the ERB template into pure
+  >   HTML
+
+5. What's the role of instance variables in Sinatra?
+  > Instance variables are accessible during the current request.  They must be
+  >   persisted to be accessible in future requests.
