@@ -20,9 +20,7 @@ Week 3 quiz
   >   <input type="text" name="username" value="bob" />
   > </form>
   >
-  > <form method="get">
-  >   <input type="text" name="username" value="bob" />
-  > </form>
+  > url?username=bob
 
 5. Why is it important for us, as web developers, to understand that HTTP is a
    "stateless" protocol?
