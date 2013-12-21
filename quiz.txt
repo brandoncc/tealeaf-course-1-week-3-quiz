@@ -17,11 +17,11 @@ Week 3 quiz
 4. How do you submit an HTTP POST request, with a "username" attribute set to
    "bob"? What if we wanted a GET request instead?
   > <form method="post">
-  >   <input type="text" name="bob" />
+  >   <input type="text" name="username" value="bob" />
   > </form>
   >
-  > <form>
-  >   <input type="text" name="bob" />
+  > <form method="get">
+  >   <input type="text" name="username" value="bob" />
   > </form>
 
 5. Why is it important for us, as web developers, to understand that HTTP is a
